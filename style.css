@@ -74,8 +74,9 @@ header{
 .coul{
     background-color: #61290a;
     position: absolute;
-    opacity: 0.7;
+    opacity: 1;
     height: 500px;
+    mix-blend-mode: multiply;
     width: 100%;    
 }
 
@@ -162,17 +163,16 @@ header{
     background-color: white;
     height: 350px;
 }
-.service h2, p{
-    text-align: center;
-}
 .service h2{
     font-size: 30px;
     font-weight: bold;
     padding-top: 50px;
     padding-bottom: 20px;
+    text-align: center;
 }
 .service p{
     padding-bottom: 30px;
+    text-align: center;
 }
 .service .card-service{
     display: flex;
@@ -320,7 +320,8 @@ header{
     background-color: #61290a;
     position: absolute;
     overflow: hidden;
-    opacity: 0.7;
+    opacity: 1;
+    mix-blend-mode: multiply;
     top: 0;
     left: 0;
     height: 240px;
@@ -374,6 +375,7 @@ footer .icone ul li a i{
 }
 footer .copyright{
     color: #9e8f8f;
+    text-align: center;
 }
 footer hr {
     width: 83%;
