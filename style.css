@@ -212,7 +212,7 @@ header{
     text-align: center;
     padding-bottom: 60px;
 }
-.carte-acceuil img{
+.carte-acceuil iframe{
     width: 700px;
     height: 250px;
     border-radius: 20px;
