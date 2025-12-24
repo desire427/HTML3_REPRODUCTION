@@ -236,12 +236,14 @@ header{
     height: 170px;
     width: 30%;
     margin-right: 10px;
+    position: relative;
 }
 .image-pro{
     height: 170px;
     width: 100%;
     margin-right: 10px;
 }
+
 .image-pro img{
     height: 100%;
     width: 100%;
@@ -249,22 +251,14 @@ header{
 }
 .card-produit .pp1 p{
     position: absolute;
-    top: 116%;
-    left: 23em;
+    top: 4%;
+    left: 60%;
     color: rgb(2, 29, 2);
     background-color: rgb(146, 243, 146);
     padding: 8px 14px;
     border-radius: 10px
 }
-.card-produit .pp2 p{
-    position: absolute;
-    top: 145%;
-    left: 23em;
-    color: rgb(2, 29, 2);
-    background-color: rgb(146, 243, 146);
-    padding: 8px 14px;
-    border-radius: 10px
-}
+
 .haut-pro{
     display: flex;
     justify-content: space-between;
@@ -364,7 +358,7 @@ header{
 /* =========================== SECTION FOOTER ============================ */
 footer{
     height: 370px;
-    background-color: #010208;
+    background-color: #020011;
     list-style: none;
 }
 
