@@ -11,13 +11,14 @@
 }
 body{
     background-color: var(--primary);
+    scroll-behavior: smooth;
 }
 
 h1 , h3{
     color: var(--secondary);
     margin-bottom: 0.8em;
 }
-section p{
+section p, label{
     color: var(--card);
 }
 /* button{
@@ -149,16 +150,15 @@ section p{
 .projet-card{
     width: 100%;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 2fr);
     gap: 3em;
 }
 .projet-item{
     width: 90%;
-    height: 10em;
+    height: auto;
     margin: auto;
     padding: 1.3em;
     position: relative;
-    height: 10em;
     font-size: 1.3em;
     box-shadow: 5px 5px 20px rgba(252, 250, 250, 0.3);
     border-radius: 10px;
@@ -179,24 +179,28 @@ section p{
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    border-radius: 10px;
 }
 .projet-item:nth-child(2){
     background-image: url(image/salade_1.jpeg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    border-radius: 10px;
 }
 .projet-item:nth-child(3){
     background-image: url(image/banner-head-accueil.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    border-radius: 10px;
 }
 .projet-item:nth-child(4){
     background-image: url(image/thieboudieunerouge.JPG);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    border-radius: 10px;
 }
 .coull{
     background-color: var(--primary);
@@ -217,51 +221,54 @@ section p{
     z-index: 3;
 }
 
+/*  ============================ CONTACT ================================  */
+.contact{
+    margin-top: 2em;
+    padding-left: 1em;
+    margin-bottom: 2em;
+}
+.formul{
+    margin: auto;
+}
+.formul form{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+.cont-item {
+    padding: 1.3em;
+}
+.formul form textarea{
+    width: 100%;
+    height: 3em;
+    padding-left: 30em;
+    margin-left: 1.8em;
+}
+.cont-item input{
+    width: 30em;
+    height: 2.3em;
+    border-radius: 10px;
+}
+.contact button{
+    background-color: var(--secondary);
+    padding: 1.4em 2em;
+    margin-top: 1em;
+    font-weight: bold;
+    color: var(--primary);
+    border-radius: 10px;
+    margin-left: 2em;
+}
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*  ============================ A PROPOS ================================  */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*  ============================ A PROPOS ================================  */
-
+/*  ============================ FOOTER ================================  */
+/* footer{
+    width: 100%;
+    height: 20em;
+    text-align: center;
+    font-size: 1em;
+    font-weight: bold;
+    padding-top: 2em;
+    background-color: var(--primary);
+} */
 
 
 

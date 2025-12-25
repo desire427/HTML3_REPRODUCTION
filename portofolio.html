@@ -16,10 +16,10 @@
             <div class="section">
                 <ul>
                     <li class="section-item"><a href="#">Accueil</a></li>
-                    <li class="section-item"><a href="#">À propos</a></li>
-                    <li class="section-item"><a href="#">Compétences</a></li>
-                    <li class="section-item"><a href="#">Projets</a></li>
-                    <li class="section-item"><a href="#">Contact</a></li>
+                    <li class="section-item"><a href="#apropos">À propos</a></li>
+                    <li class="section-item"><a href="#competence">Compétences</a></li>
+                    <li class="section-item"><a href="#projet">Projets</a></li>
+                    <li class="section-item"><a href="#contact">Contact</a></li>
                 </ul>
             </div>
         </nav>
@@ -27,7 +27,7 @@
     </header>
 
     <!-- ============================ A PROPOS ================================ -->
-     <section>
+     <section id="apropos">
         <div class="coulor"></div>
         <div class="apropos">
             <div class="image-porto"></div>
@@ -41,7 +41,7 @@
      <hr>
 
     <!-- ============================ COMPETENCES ================================ -->
-     <section>
+     <section id="competence">
         <div class="competence">
             <h1>MES COMPETENCES</h1>
             <div class="comp-item">
@@ -76,32 +76,32 @@
      <hr>
 
     <!-- ============================ PROJET ================================ -->
-     <section>
+     <section id="projet">
         <div class="projet">
             <h1>PROJETS REALISES</h1>
             <div class="projet-card">
                 <div class="projet-item">
                     <div class="coull"></div>
-                    <h3>Projet 1</h3>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magnam maxime accusamus atque cum delectus exercitationem, veritatis id quae totam architecto laudantium, voluptatem amet. Cum, sit maxime! Architecto consequuntur cupiditate provident.</p>
+                    <h3>Système de détection de la fatigue du conducteur</h3>
+                    <p>Ce projet consiste à développer une application web intégrant une webcam pour surveiller en temps réel les signes de somnolence chez un conducteur. En utilisant des bibliothèques comme OpenCV et Keras, le système analyse les mouvements oculaires et les expressions faciales pour détecter si le conducteur est fatigué. En cas de détection, une alarme est déclenchée via l’interface web, alertant le conducteur pour prévenir les accidents de la route.</p>
                     <button>Voir le projet</button>
                 </div>
                 <div class="projet-item">
                     <div class="coull"></div>
-                    <h3>Projet 2</h3>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magnam maxime accusamus atque cum delectus exercitationem, veritatis id quae totam architecto laudantium, voluptatem amet. Cum, sit maxime! Architecto consequuntur cupiditate provident.</p>
+                    <h3>Plateforme de recommandation de films avec packages R</h3>
+                    <p>Ce projet vise à créer une application web permettant de recommander des films aux utilisateurs en fonction de leurs préférences. En utilisant des packages R comme tidyverse, shiny, et recommenderlab, le système analyse les historiques d’avis et de notations des utilisateurs pour générer des suggestions personnalisées. L’interface web est construite avec Shiny, offrant une expérience interactive et dynamique.</p>
                     <button>Voir le projet</button>
                 </div>
                 <div class="projet-item">
                     <div class="coull"></div>
-                    <h3>Projet 3</h3>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magnam maxime accusamus atque cum delectus exercitationem, veritatis id quae totam architecto laudantium, voluptatem amet. Cum, sit maxime! Architecto consequuntur cupiditate provident.</p>
+                    <h3>Application de détection de fausses nouvelles en temps réel</h3>
+                    <p>Ce projet développe une application web capable d’analyser automatiquement les articles de presse pour détecter s’ils sont authentiques ou falsifiés. En utilisant un modèle d’apprentissage automatique basé sur TF-IDF et un classificateur comme PassiveAggressiveClassifier, l’application traite le texte des articles et fournit une évaluation d’authenticité. L’interface web permet aux utilisateurs de coller un lien ou un texte pour une analyse instantanée.</p>
                     <button>Voir le projet</button>
                 </div>
                 <div class="projet-item">
                     <div class="coull"></div>
-                    <h3>Projet 4</h3>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magnam maxime accusamus atque cum delectus exercitationem, veritatis id quae totam architecto laudantium, voluptatem amet. Cum, sit maxime! Architecto consequuntur cupiditate provident.</p>
+                    <h3>Détection de fraudes aux cartes de crédit via Python</h3>
+                    <p>Ce projet utilise des algorithmes d’apprentissage automatique comme les arbres de décision, les réseaux de neurones artificiels (ANN) et le clustering pour identifier des transactions suspectes. En analysant les comportements de dépenses des utilisateurs à partir d’un ensemble de données réelles, le modèle apprend à distinguer les transactions normales des frauduleuses, permettant ainsi une détection précoce et une alerte automatique.</p>
                     <button>Voir le projet</button>
                 </div>
             </div>
@@ -110,10 +110,39 @@
 
      <hr>
 
-    <!-- ============================ COMPETENCES ================================ -->
+    <!-- ============================ CONTACT ================================ -->
+     <section>
+        <div class="contact">
+            <h1>CONTACT</h1>
+            <div class="formul">
+                <form action="#">
+                    <div class="cont-item">
+                        <label for="nom">Nom</label><br>
+                        <input type="text" name="nom" id="nom"><br>
+                    </div>
+                    <div class="cont-item">
+                        <label for="nom">Prenom</label><br>
+                        <input type="text" name="nom" id="nom"><br>
+                    </div>
+                    <div class="cont-item">
+                        <label for="telephone">Telephone</label><br>
+                        <input type="number" name="telephone" id="telephone"><br>
+                    </div>
+                    <div class="cont-item">
+                        <label for="email">Mail</label><br>
+                        <input type="email" name="email" id="email"><br>
+                    </div>
+                    <textarea name="message" id="message"></textarea>
+                </form>
+                <button type="submit">Envoyer</button>
+            </div>
+        </div>
+     </section>
 
-
-    <!-- ============================ COMPETENCES ================================ -->
+    <!-- ============================ FOOTER ================================ -->
+     <!-- <footer>
+        &copy; 2026 Portofolio. Tous droits réservés.
+     </footer> -->
 
 </body>
 </html>
