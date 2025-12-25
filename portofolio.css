@@ -31,6 +31,7 @@ section p{
 } */
 /* ============================ HEADER ================================ */
 header{
+    width: 100%;
     background-color: var(--primary);
     z-index: 100;
     position: sticky;
@@ -201,12 +202,14 @@ section p{
     background-color: var(--primary);
     height: 100%;
     width: 100%;
-    opacity: 0.6;
+    opacity: 0.9;
     inset: 0;
     z-index: 1;
     position: absolute;
 }
-
+.projet h1{
+    margin-left: 1em;
+}
 .projet-item h3,
 .projet-item p,
 .projet-item button{
