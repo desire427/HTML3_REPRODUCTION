@@ -1,0 +1,194 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+    background-color: #e6e5e2;
+}
+/* ============================ SECTION HEADER =============================== */
+header{
+    background-color: #ffffff;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.logo img{
+    width: 100px;
+    height: 50px
+}
+
+.header-lien{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.header-lien a{
+    margin-left: 50px;
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+}
+.header-lien a:hover{
+    color: #E65100;
+    text-decoration: underline solid 2px #E65100;
+    transition: 0.5s;
+}
+.connexion-btn , .incription-btn{
+    padding: 10px 20px;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+.incription-btn a{
+    color: black;
+    text-decoration: none;
+}
+.header-buttons button:hover{
+    color: #ffffff;
+    background-color: #E65100;
+    transition: 0.5s;
+}
+.incription-btn:hover{
+    transform: rotate(10deg);
+}
+.connexion-btn:hover{
+    transform: rotate(-10deg);
+}
+
+/*  ========================== SECTION CONNEXION ============================  */
+.connexion{
+    width: 30%;
+    background-color: white;
+    height: 20em;
+    margin-bottom: 10em;
+    margin-top: 10em;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 5px 5px 30px rgb(0, 0, 0, 0.1);
+    border-radius: 5px;
+    padding: 1em 1.4em;
+}
+.connexion h2{
+    text-align: center;
+}
+.connexion form .input1{
+    width: 100%;
+    height: 2.5em;
+    border-radius: 4px;
+    margin-bottom: 1em;
+    padding: 1em;
+    border: 1px solid rgb(138, 137, 137);
+    box-shadow: 5px 5px 30px rgba(115, 112, 112, 0.1);
+}
+.autres{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1.4em;
+}
+.autres .aut-d a{
+    color: #E65100;
+}
+.autres .aut-g input{
+    box-shadow: 5px 5px 30px rgba(45, 44, 44, 0.1);
+}
+.connexion form .pas-enc{
+    color: #E65100;
+}
+.connexion form .pas-enc a{
+    color: #E65100;
+}
+.connexion form a button{
+    color: white;
+    background-color: #E65100;
+    border: none;
+    width: 100%;
+    padding: 0.8em;
+    margin-top: 1em;
+    border-radius: 5px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =========================== SECTION FOOTER ============================ */
+footer{
+    height: 370px;
+    background-color: #020011;
+    list-style: none;
+}
+
+footer .element {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 40px;
+}
+footer .element .footer-item span{
+    color: #f3f3f3;
+    font-size: 15px;
+    font-weight: bold;
+    padding-bottom: 20px;
+}
+footer .element .footer-item p{
+    color: #f3f3f3;
+    font-size: 15px;
+    font-weight: bold;
+    padding-bottom: 20px;
+}
+footer .element ul li a{
+    color: #bdb68d;
+    text-decoration: none;
+    font-size: 15px;
+}
+footer .element ul li {
+    color: #bdb68d;
+    text-decoration: none;
+    font-size: 18px;
+    padding-top: 15px;
+}
+footer .icone {
+    display: flex;
+    font-size: 20px;
+    margin-left: 73.5%;
+    padding-bottom: 30px;
+}
+footer .icone ul li a i{
+    color: #9e8f8f;
+}
+footer .copyright{
+    color: #9e8f8f;
+    text-align: center;
+}
+footer hr {
+    width: 83%;
+    margin: auto;
+    background-color: #9e8f8f;
+    
+}
