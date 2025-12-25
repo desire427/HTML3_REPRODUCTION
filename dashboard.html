@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="dashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer">
+
+</head>
+<body>
+    <!-- ==================================== SIDEBAR ================================= -->
+    <aside>
+        <div class="image">
+            <img src="image/logo.png" alt="Logo">
+        </div>
+        <div class="element-lien">
+            <ul>
+                <li><a href="#"><i class="fa-regular fa-house"></i>Tableau de bord</a></li>
+                <li><a href="#"><i class="fa-solid fa-book-open"></i>Cours de cuisine</a></li>
+                <li><a href="#"><i class="fa-solid fa-tag"></i>Categories</a></li>
+                <li><a href="#"><i class="fa-solid fa-building"></i>Restaurant</a></li>
+                <li><a href="#"><i class="fa-solid fa-building"></i>Traiteur</a></li>
+                <li><a href="#"><i class="fa-regular fa-star"></i>Avis</a></li>
+            </ul>
+        </div>
+        <div class="element-bas">
+            <ul>
+                <li><a href="index.html"><i class="fa-solid fa-right-from-bracket"></i>Retour a l'accueil</a></li>
+                <li><a href="#"><i class="fa-solid fa-right-from-bracket"></i>Deconnexion</a></li>
+            </ul>
+        </div>
+    </aside>
+
+    <!-- ==================================== CORPS ================================= -->
+     <main>
+        <div class="contenu-total">
+            <div class="haut-premier">
+                <div class="rest">
+                    <h3>Restaurants</h3>
+                    <p>Gerez les Restaurants de la plateforme</p>
+                </div>
+                <a href="#"><button>Ajouter un Restaurant</button></a>
+            </div>
+            <div class="zone">
+                <p>Zone</p>
+                <div class="liste-zone">
+                    <select name="zone" id="zone">
+                        <option value="zone">Toutes les zones</option>
+                    </select>
+                    <button>Filtrer</button>
+                </div>
+            </div>
+            <div class="tabl">
+                <div class="en-tete">
+                    <p class="tabl-item">NOM</p>
+                    <p class="tabl-item">EMAIL</p>
+                    <p class="tabl-item">ZONE</p>
+                    <p class="tabl-item">STATUT</p>
+                    <p class="tabl-item">ACTION</p>
+                </div>
+                <div class="tablea">      
+                    <p class="enregistrement-item-info"><img src="image/carte.png" alt="Le Djoloff"><span>Le Djoloff</span></p>
+                    <p class="enregistrement-item-info">contact@ledjoloff.sn</p>
+                    <p class="enregistrement-item-info">Plateau</p>
+                    <p class="enregistrement-item-info"><span  id="statut-en-at">En attente</span></p>
+                    <p class="enregistrement-item-info"><span class="modif"><a href="#">Modifier</a></span> <span class="suppr"><a href="#">Supprimer</a></span></p>
+                </div>
+                <div class="tablea">      
+                    <p class="enregistrement-item-info"><img src="image/carte.png" alt="Le Djoloff"><span>Le Djoloff</span></p>
+                    <p class="enregistrement-item-info">contact@ledjoloff.sn</p>
+                    <p class="enregistrement-item-info">Plateau</p>
+                    <p class="enregistrement-item-info"><span  id="statut-en-at">En attente</span></p>
+                    <p class="enregistrement-item-info"><span class="modif"><a href="#">Modifier</a></span> <span class="suppr"><a href="#">Supprimer</a></span></p>
+                </div>
+                <div class="tablea">      
+                    <p class="enregistrement-item-info"><img src="image/carte.png" alt="Le Djoloff"><span>Le Djoloff</span></p>
+                    <p class="enregistrement-item-info">contact@ledjoloff.sn</p>
+                    <p class="enregistrement-item-info">Plateau</p>
+                    <p class="enregistrement-item-info"><span  id="statut-ver">Verifie</span></p>
+                    <p class="enregistrement-item-info"><span class="modif"><a href="#">Modifier</a></span> <span class="suppr"><a href="#">Supprimer</a></span></p>
+                </div>
+                <div class="tablea">      
+                    <p class="enregistrement-item-info"><img src="image/carte.png" alt="Le Djoloff"><span>Le Djoloff</span></p>
+                    <p class="enregistrement-item-info">contact@ledjoloff.sn</p>
+                    <p class="enregistrement-item-info">Plateau</p>
+                    <p class="enregistrement-item-info"><span  id="statut-ver">Verifie</span></p>
+                    <p class="enregistrement-item-info"><span class="modif"><a href="#">Modifier</a></span> <span class="suppr"><a href="#">Supprimer</a></span></p>
+                </div>
+                <div class="tablea">      
+                    <p class="enregistrement-item-info"><img src="image/carte.png" alt="Le Djoloff"><span>Le Djoloff</span></p>
+                    <p class="enregistrement-item-info">contact@ledjoloff.sn</p>
+                    <p class="enregistrement-item-info">Plateau</p>
+                    <p class="enregistrement-item-info"><span  id="statut-en-at">En attente</span></p>
+                    <p class="enregistrement-item-info"><span class="modif"><a href="#">Modifier</a></span> <span class="suppr"><a href="#">Supprimer</a></span></p>
+                </div>
+                <div class="tablea">      
+                    <p class="enregistrement-item-info"><img src="image/carte.png" alt="Le Djoloff"><span>Le Djoloff</span></p>
+                    <p class="enregistrement-item-info">contact@ledjoloff.sn</p>
+                    <p class="enregistrement-item-info">Plateau</p>
+                    <p class="enregistrement-item-info"><span  id="statut-en-at">En attente</span></p>
+                    <p class="enregistrement-item-info"><span class="modif"><a href="#">Modifier</a></span> <span class="suppr"><a href="#">Supprimer</a></span></p>
+                </div>
+                <div class="tablea">      
+                    <p class="enregistrement-item-info"><img src="image/carte.png" alt="Le Djoloff"><span>Le Djoloff</span></p>
+                    <p class="enregistrement-item-info">contact@ledjoloff.sn</p>
+                    <p class="enregistrement-item-info">Plateau</p>
+                    <p class="enregistrement-item-info"><span  id="statut-en-at">En attente</span></p>
+                    <p class="enregistrement-item-info"><span class="modif"><a href="#">Modifier</a></span> <span class="suppr"><a href="#">Supprimer</a></span></p>
+                </div>
+                <div class="tablea">      
+                    <p class="enregistrement-item-info"><img src="image/carte.png" alt="Le Djoloff"><span>Le Djoloff</span></p>
+                    <p class="enregistrement-item-info">contact@ledjoloff.sn</p>
+                    <p class="enregistrement-item-info">Plateau</p>
+                    <p class="enregistrement-item-info"><span  id="statut-en-at">En attente</span></p>
+                    <p class="enregistrement-item-info"><span class="modif"><a href="#">Modifier</a></span> <span class="suppr"><a href="#">Supprimer</a></span></p>
+                </div>
+            </div>
+        </div>
+        
+     </main>
+</body>
+</html>
