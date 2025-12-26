@@ -21,15 +21,9 @@ h1 , h3{
 section p, label{
     color: var(--card);
 }
-/* button{
-    background-color: var(--secondary);
-    color: var(--primary);
-    padding: 0.6rem 1rem;
-    border-radius: 10px;
-    font-weight: bold;
-    border: none;
+button{
     cursor: pointer;
-} */
+}
 /* ============================ HEADER ================================ */
 header{
     width: 100%;
@@ -237,11 +231,10 @@ section p{
 .cont-item {
     padding: 1.3em;
 }
-.formul form textarea{
-    width: 100%;
-    height: 3em;
-    padding-left: 30em;
-    margin-left: 1.8em;
+.formul textarea{
+    width: 80%;
+    height: 5em;
+    margin-left: 1.3em;
 }
 .cont-item input{
     width: 30em;
@@ -256,19 +249,26 @@ section p{
     color: var(--primary);
     border-radius: 10px;
     margin-left: 2em;
+    border: none;
 }
 
 
 /*  ============================ FOOTER ================================  */
-/* footer{
+footer{
     width: 100%;
-    height: 20em;
+    height: 10em;
     text-align: center;
     font-size: 1em;
     font-weight: bold;
     padding-top: 2em;
     background-color: var(--primary);
-} */
+    color: var(--card);
+}
+footer a i{
+    color: var(--secondary);
+    font-size: 1.5em;
+    padding-bottom: 1em;
+}
 
 
 
