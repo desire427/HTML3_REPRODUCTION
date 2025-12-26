@@ -34,28 +34,31 @@ header{
 }
 nav{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     padding: 1.3em;
     
 }
 header nav .section ul{
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
 }
 header nav .logo h2{
-    margin-left: 5em;
     font-size: 1.4em;
+    margin-right: 1em;
     color: var(--secondary);
 }
+
 header nav .section ul .section-item{
-    margin-right: 3em;
+    margin-right: 1em;
     font-size: 1.4em;
 }
 header nav .section ul .section-item a{
     color: var(--secondary);
 }
-
+header nav input, header nav label{
+    display: none;
+}
 /*  ============================ A PROPOS ================================  */
 .apropos{
     background-image: url(image/hero-porto.webp);
@@ -93,7 +96,8 @@ header nav .section ul .section-item a{
 
 
 .apropos .ecriture h1{
-    font-size: 5em;
+    margin-bottom: 0.2em;
+    font-size: 4em;
     z-index: 3;
     position: relative;
 }
@@ -103,6 +107,7 @@ header nav .section ul .section-item a{
     position: relative;
     color: var(--secondary);
 }
+
 /*  ============================ COMPETENCE ================================  */
 .competence{
     margin-top: 2em;
@@ -226,20 +231,22 @@ section p{
 }
 .formul form{
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(1, 1fr);
 }
 .cont-item {
     padding: 1.3em;
 }
 .formul textarea{
-    width: 80%;
+    width: 92%;
     height: 5em;
     margin-left: 1.3em;
+    background-color: rgb(76, 71, 71);
 }
 .cont-item input{
-    width: 30em;
+    width: 100%;
     height: 2.3em;
     border-radius: 10px;
+    background-color: rgb(76, 71, 71);
 }
 .contact button{
     background-color: var(--secondary);
@@ -270,35 +277,225 @@ footer a i{
     padding-bottom: 1em;
 }
 
+/*  ============================ RESPONSIVITE SUR TABLETTE ================================  */
+
+@media (min-width: 706px) and (max-width: 905px) {
+/* ================ HEADER ================= */
+header nav .logo h2{
+    font-size: 1.2em;
+    color: var(--secondary);
+}
+
+header nav .section ul .section-item a{
+    font-size: 0.8em;
+}
+/* ================ A PROPOS ================= */
+.apropos{
+    height: 20em;
+}
+.coulor{
+    height: 22em;
+}
+.apropos .image-porto{
+    z-index: 3;
+    width: 15em;
+    height: 15em;
+}
+
+
+.apropos .ecriture h1{
+    margin-bottom: 0em;
+    font-size: 2em;
+}
+.apropos .ecriture p{
+    font-size: 1em;
+    z-index: 3;
+    position: relative;
+    color: var(--secondary);
+}
+/* ================ COMPETTENCES ================= */
+.comp-item{
+    grid-template-columns: repeat(3, 2fr);
+    gap: 0.8em;
+}
+.competence h1{
+    font-size: 1.3em;
+    margin-left: 0.6em;
+}
+.competence-item {
+    padding: 0.4em;
+}
+.competence-item h3{
+    font-size: 0.8em;
+}
+.competence-item p{
+    font-size: 0.6em;
+}
+
+/* ================ PROJET ================= */
+.projet-card{
+    grid-template-columns: repeat(1, 2fr);
+    gap: 1em;
+}
+.projet-item{
+    padding: 1em;
+    font-size: 1em;
+    box-shadow: 5px 5px 20px rgba(252, 250, 250, 0.3);
+    border-radius: 10px;
+
+}
+.projet .projet-card .projet-item button{
+    padding: 0.4rem 0.6rem;
+}
+
+.projet h1{
+    margin-left: 0.5em;
+    font-size: 1.5em;
+}
+.projet h3{
+    font-size: 1.2em;
+}
+
+/* ================ CONTACT ================= */
+.contact{
+    margin-top: 2em;
+    padding-left: 1em;
+    margin-bottom: 2em;
+}
+.cont-item {
+    padding: 1em;
+}
+}
 
 
 
 
+/*  ============================ RESPONSIVITE SUR MOBILE ================================  */
 
+@media (min-width: 150px) and (max-width: 705px) {
+/* ================ HEADER ================= */
+header{
+    width: 100%;
+    background-color: var(--primary);
+    z-index: 100;
+    position: sticky;
+    top: 0;
+}
+header nav input, header nav label{
+    display: block;
+}
+nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1.3em;
+    
+}
+header nav input{
+    appearance: none;
+}
 
+header nav .section ul{
+    position: absolute;
+    display: block;
+    transform: translate(-800px, 0);
+    top: 3.5em;
+    left: 0;
+    right: 0;
+    height: 100vh;
+    background-color: var(--primary);
+}
+header #ch:checked ~ .section ul {
+    transform: translate(0,0); 
+    transition: all 0.5s ease;
+}
+header nav .logo h2{
+    font-size: 1em;
+}
 
+header nav .section ul .section-item{
+    text-align: center;
+    margin-bottom: 1px;
+    font-size: 1em;
+    padding: 1em;
+    background-color: rgba(221, 221, 221, 0.3);
+}
+header nav .section ul .section-item a{
+    color: var(--secondary);
+}
 
+/* ================ A PROPOS ================= */
+.apropos{
+    height: 20em;
+}
+.coulor{
+    height: 22em;
+}
+.apropos .image-porto{
+    z-index: 3;
+    width: 8em;
+    height: 8em;
+}
+.apropos .ecriture h1{
+    margin-bottom: 0.5em;
+    font-size: 1.6em;
+}
+.apropos .ecriture p{
+    font-size: 0.9em;
+}
+/* ================ COMPETTENCES ================= */
+.comp-item{
+    grid-template-columns: repeat(2, 2fr);
+    gap: 0.8em;
+}
+.competence h1{
+    font-size: 1.3em;
+    margin-left: 0.6em;
+}
+.competence-item {
+    padding: 0.4em;
+}
+.competence-item h3{
+    font-size: 0.8em;
+}
+.competence-item p{
+    font-size: 0.6em;
+}
 
+/* ================ PROJET ================= */
+.projet-card{
+    grid-template-columns: repeat(1, 2fr);
+    gap: 1em;
+}
+.projet-item{
+    padding: 0.5em;
+    font-size: 1em;
+    box-shadow: 5px 5px 20px rgba(252, 250, 250, 0.3);
+    border-radius: 10px;
 
+}
+.projet .projet-card .projet-item button{
+    padding: 0.4rem 0.6rem;
+}
 
+.projet h1{
+    margin-left: 0.5em;
+    font-size: 1.5em;
+}
+.projet h3{
+    font-size: 1.2em;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-/*  ============================ A PROPOS ================================  */
-
-
-
-
+/* ================ CONTACT ================= */
+.contact{
+    margin-top: 2em;
+    padding-left: 1em;
+    margin-bottom: 2em;
+}
+.cont-item {
+    padding: 1em;
+}
+}
 
 
 
