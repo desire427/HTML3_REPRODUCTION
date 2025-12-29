@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="dashboard2.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer">
+
+</head>
+<body>
+    <!-- ==================================== SIDEBAR ================================= -->
+    <aside>
+        <div class="image">
+            <img src="image/logo.png" alt="Logo">
+        </div>
+        <div class="element-lien">
+            <ul>
+                <li><a href="#"><i class="fa-regular fa-house"></i>Tableau de bord</a></li>
+                <li><a href="#"><i class="fa-solid fa-book-open"></i>Cours de cuisine</a></li>
+                <li><a href="#"><i class="fa-solid fa-tag"></i>Categories</a></li>
+                <li><a href="#"><i class="fa-solid fa-building"></i>Restaurant</a></li>
+                <li><a href="#"><i class="fa-solid fa-building"></i>Traiteur</a></li>
+                <li><a href="#"><i class="fa-regular fa-star"></i>Avis</a></li>
+            </ul>
+        </div>
+        <div class="element-bas">
+            <ul>
+                <li><a href="index.html"><i class="fa-solid fa-right-from-bracket"></i>Retour a l'accueil</a></li>
+                <li><a href="#"><i class="fa-solid fa-right-from-bracket"></i>Deconnexion</a></li>
+            </ul>
+        </div>
+    </aside>
+
+    <!-- ==================================== CORPS ================================= -->
+     <main>
+        <div class="contenu-total">
+            <div class="haut-premier">
+                <div class="rest">
+                    <h3>Restaurants</h3>
+                    <p>Gerez les Restaurants de la plateforme</p>
+                </div>
+                <a href="#"><button>Ajouter un Restaurant</button></a>
+            </div>
+            <div class="zone">
+                <p>Zone</p>
+                <div class="liste-zone">
+                    <select name="zone" id="zone">
+                        <option value="zone">Toutes les zones</option>
+                    </select>
+                    <button>Filtrer</button>
+                </div>
+            </div>
+            
+        </div>
+        <table>
+            <thead>
+                <tr>
+                    <td>NOM</td>
+                    <td>EMAIL</td>
+                    <td>ZONE</td>
+                    <td>STATUT</td>
+                    <td>ACTION</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="im_nom"><img src="image/carte.png" alt="Le Djoloff"><span>Le Djoloff</span></td>
+                    <td>contact@ledjoloff.sn</td>
+                    <td>Plateau</td>
+                    <td><span id="statut-en-at">En attente</span></td>
+                    <td><span class="modif"><a href="#">Modifier</a></span> <span class="suppr"><a href="#">Supprimer</a></span></td>
+                </tr>
+                <tr>
+                    <td class="im_nom"><img src="" alt="Chez Loutcha"><span>Chez Loutcha</span></td>
+                    <td>contact@chezoutcha.sn</td>
+                    <td>Plateau</td>
+                    <td><span id="statut-en-at">En attente</span></td>
+                    <td><span class="modif"><a href="#">Modifier</a></span> <span class="suppr"><a href="#">Supprimer</a></span></td>
+                </tr>
+                <tr>
+                    <td class="im_nom"><img src="" alt="Le Thiossane"><span>Le Thiossane</span></td>
+                    <td>contact@lethiossane.sn</td>
+                    <td>Medina</td>
+                    <td><span  id="statut-ver">Verifie</span></td>
+                    <td><span class="modif"><a href="#">Modifier</a></span> <span class="suppr"><a href="#">Supprimer</a></span></td>
+                </tr>
+                <tr>
+                    <td class="im_nom"><img src="" alt="Sushi Dakar"><span>Sushi Dakar</span></td>
+                    <td>contact@sushidakar.sn</td>
+                    <td>Almadies</td>
+                    <td><span  id="statut-ver">Verifie</span></td>
+                    <td><span class="modif"><a href="#">Modifier</a></span> <span class="suppr"><a href="#">Supprimer</a></span></td>
+                </tr>
+                <tr>
+                    <td class="im_nom"><img src="image/banner-caterers.jpg" alt="banner-caterers"><span>Amanda Larson</span></td>
+                    <td>vedevi@mailinator.com</td>
+                    <td>Aut dignissimos iure</td>
+                    <td><span id="statut-en-at">En attente</span></td>
+                    <td><span class="modif"><a href="#">Modifier</a></span> <span class="suppr"><a href="#">Supprimer</a></span></td>
+                </tr>
+                <tr>
+                    <td class="im_nom"><img src="image/banner-head-accueil.jpg" alt="banner-caterers"><span>Mara Knight</span></td>
+                    <td>totynukisa@mailinator.com</td>
+                    <td>Possimus quis moles</td>
+                    <td><span id="statut-en-at">En attente</span></td>
+                    <td><span class="modif"><a href="#">Modifier</a></span> <span class="suppr"><a href="#">Supprimer</a></span></td>
+                </tr>
+                 <tr>
+                    <td class="im_nom"><img src="" alt=""><span>Joan Salinas</span></td>
+                    <td>tiqotinef@mailinator.com</td>
+                    <td>Amet voluptaterm ips</td>
+                    <td><span id="statut-en-at">En attente</span></td>
+                    <td><span class="modif"><a href="#">Modifier</a></span> <span class="suppr"><a href="#">Supprimer</a></span></td>
+                </tr>
+                 <tr>
+                    <td class="im_nom"><img src="image/hero-porto.webp" alt="banner-caterers"><span>Serena Thornton</span></td>
+                    <td>mihonalah@mailinator.com</td>
+                    <td>Reprehenderit volupt</td>
+                    <td><span id="statut-en-at">En attente</span></td>
+                    <td><span class="modif"><a href="#">Modifier</a></span> <span class="suppr"><a href="#">Supprimer</a></span></td>
+                </tr>
+            </tbody>
+        </table>
+        
+     </main>
+</body>
+</html>
