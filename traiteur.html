@@ -10,6 +10,8 @@
 <body>
     <!-- ======================= SECTION DU HEADER ===================== -->
     <header>
+        
+        <!-- <input type="checkbox" name="chb" id="chb"> -->
         <div class="logo">
             <img src="image/logo.png" alt="Logo">
         </div>
@@ -18,14 +20,15 @@
                 <li><a href="index.html">Accueil</a></li>
                 <li><a href="dashboard.html">Restaurants</a></li>
                 <li><a href="contact.html">Cours de Cuisine</a></li>
-                <li id="head-panier"><a href="traiteur.html">Traiteur</a></li>
+                <li><a href="traiteur.html">Traiteur</a></li>
                 <li><a href="login.html">Contact</a></li>
             </ul>
         </nav>
         <div class="header-buttons">
-            <a href="connexion.html"><button class="connexion-btn">Connexion</button></a>
-            <a href="inscription-traiteur.html"><button class="incription-btn">Inscription</button></a>
+            <button class="connexion-btn">Connexion</button>
+            <button class="incription-btn">Inscription</button>
         </div>
+        <label for="chb"><i class="fa-solid fa-bars"></i></label>
     </header>
 
     <!-- ======================= SECTION PRESENTATION ======================== -->
@@ -45,23 +48,33 @@
     <!-- ======================= SECTION PRODUIT ======================== -->
 
     <section>
-        <div class="filre">
+        <div class="filtre">
             <h2> Filtres </h2>
-            <div class="filtre-item">
-                <p class="item">Specialite</p>
-                <p class="item">Statut</p>
-                <p class="item">
-                    <select name="specialites" id="specialites">
-                        <option value="#">Toutes les specialites</option>
-                    </select>
-                </p>
-                <p class="item">
-                    <select name="status" id="status">
-                        <option value="#">Tous les status</option>
-                    </select>
-                </p>
-                <p class="item"><button><i class="fa-solid fa-filter"></i>Filtrer</button></p>
-                <p class="item"><button><i class="fa-solid fa-arrows-rotate"></i>Reinitialise</button></p>
+            <div class="filtre-items">
+                <div class="filtre-item-1">
+                    <div class="filtre-item">
+                        <p class="item">Specialite</p>
+                        <select name="specialites" id="specialites">
+                            <option value="#">Toutes les specialites</option>
+                        </select>
+                    </div>
+                    <div class="filtre-item">
+                        <p class="item">Statut</p>
+                        <select name="status" id="status">
+                            <option value="#">Tous les status</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="filtre-item-2">
+                    <div class="filtre-item">
+                        <br>
+                        <button class="fil"><i class="fa-solid fa-filter"></i> Filtrer</button>
+                    </div>
+                    <div class="filtre-item">
+                        <br>
+                        <button class="rei"><i class="fa-solid fa-arrows-rotate"></i> Reinitialise</button>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="card-produit">

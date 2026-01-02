@@ -148,7 +148,8 @@ header{
 }
 
 /* ========================= PRODUIT ======================= */
-.filre{
+
+ .filtre{
     display: flex;
     align-items: center;
     border-radius: 10px;
@@ -158,32 +159,28 @@ header{
     margin-bottom: 5em;
     width: 70%;
 }
+.filtre-items{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.filtre h2{
+    margin-right: 32%;
+    font-weight: bold;
+}
+.filtre-item-1{
+    display: flex;
+}
+.filtre-item-2{
+    display: flex;
+}
 .filtre-item{
-    display: grid;
-
+    margin-left: 1rem;
 }
 
-.item button i:nth-child(1){
-    border: #f3f3f3;
-}
-.item button i:nth-child(2){
-    color: #000000;
-    padding-right: 8px;
-}
-.filre h2 {
-    margin-right: 10em;
-}
 
-.item {
-  margin-left: 30px;
-}
 
-.item:nth-child(3) { grid-column: 1; }
-.item:nth-child(4) { grid-column: 2; }
-.item:nth-child(5) { grid-column: 3; }
-.item:nth-child(6) { grid-column: 4; }
-
-.filtre-item .item select{
+.filtre-item select{
     margin-top: 2px;
     color: #010208;
     background-color: white;
@@ -195,7 +192,7 @@ header{
     box-shadow: 5px 5px 30px rgb(0, 0, 0, 0.1);
 }
 
-.item:nth-child(6) button{
+.filtre-item .rei{
     margin-top: 2px;
     color: #010208;
     background-color: white;
@@ -203,11 +200,11 @@ header{
     text-align: center;
     border-radius: 5px;
     cursor: pointer;
-    font-size: 16px;
+    font-size: 15px;
     border: #9e8f8f 2px solid;
     box-shadow: 5px 5px 30px rgb(0, 0, 0, 0.1);
 }
-.item:nth-child(5) button{
+.filtre-item .fil{
     margin-top: 2px;
     color: white;
     background-color: #E65100;
@@ -218,6 +215,7 @@ header{
     cursor: pointer;
     border-radius: 5px;
 }
+
 
 /* ============== CARDS DES PRODUITS */
 .card-produit{
@@ -409,3 +407,328 @@ footer hr {
     background-color: #9e8f8f;
     
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+header input, header label{
+    display: none;
+} /*
+/* ============= RESPONSIVITE ================ */
+@media (min-width: 105px) and (max-width: 500px){
+
+/* ============================ SECTION HEADER =============================== */
+    header{
+        padding: 10px;
+        position: sticky;
+        top: 0;
+        z-index: 100;
+    }
+    header input{
+        display: block;
+        appearance: none;
+    }
+
+    header label{
+        display: block;
+        Cursor: pointer;
+    }
+
+    .logo img{
+        width: 20vw;
+        height: 8vh
+    }
+    .header-lien{
+        display: none;
+        position: absolute;
+        transform: translate(-800px, 0);
+        align-items: center;
+        top: 3.5em;
+        left: 0;
+        right: 0;
+        height: 100vh;
+    }
+    .header-buttons{
+        display: none;
+        align-items: center;
+        position: absolute;
+        transform: translate(-800px, 0);
+        top: 20em;
+        left: 0;
+        right: 0;
+    }
+    header #chb:checked ~ nav .header-lien{
+        display: block;
+        transform: translate(0, 0);
+        transition: all 0.5s ease;
+        margin-bottom: 2em;
+        background-color: #020011;
+    }
+    header #chb:checked ~ .header-buttons{
+        display: block;
+        transform: translate(0 , 0);
+        transition: all 0.5s ease;
+    }
+    .header-lien a{
+        display: block;
+        margin-left: 50px;
+        padding: 1em;
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+/* ================================= SECTION PRESENTATION ======================= */
+    .presentation{
+        height: 80vh;
+        padding-left: 1rem;
+    }
+    .coul{
+        opacity: 0.7;
+        height: 80vh;
+        mix-blend-mode: multiply;
+        width: 100%;    
+    }
+
+    .ecriture-presention{
+        color: #ffffff;
+        position: relative;
+        width: 100%;
+        margin: auto;
+    }
+
+    .presentation .ecriture-presention h2{
+        font-size: 3em;
+        margin-bottom: 1em;
+    }
+
+    .presentation .ecriture-presention p{
+        font-size: 1.2em;
+        color: #c9bfbf;
+
+    }
+
+    
+
+    /* ========================= PRODUIT ======================= */
+    .filtre{
+        display: block;
+        padding: 0px;
+        border-radius: 10px;
+        margin-left: 1rem;
+        margin-right: 1rem;
+        margin-top: 20px;
+        margin-bottom: 5em;
+        width: 90%;
+    }
+    .filtre-items{
+        display: block;
+    }
+    .filtre h2{
+        margin-bottom: 1rem;
+        margin-right: 0%;
+        font-weight: bold;
+    }
+    .filtre-item-1{
+        display: block;
+    }
+    .filtre-item-2{
+        display: flex;
+    }
+    
+    .filtre-item{
+        margin-left: 0rem;
+        margin-bottom: 1rem;
+    }
+
+    .filtre-item select{
+        width: 100%;
+        padding: 0.8rem;
+        text-align: left;
+    }
+
+    .filtre-item .rei{
+        margin-top: 2px;
+        margin-left: 1rem;
+    }
+    /* ============== CARDS DES PRODUITS */
+    .card-produit{
+        padding: 0px;
+        display: grid;
+        margin-left: auto;
+        padding: 0px 5px;
+        margin-right: auto;
+        grid-template-columns: repeat(1, 1fr);
+        height: 50vh;
+        width: 90%;
+        box-shadow: 5px 5px 30px rgb(0, 0, 0, 0.1);
+    }
+    .gauche-pro{
+        height: 24vh;
+        width: 100%;
+        margin-bottom: 5px;
+        margin-right: auto;
+        position: relative;
+    }
+    .image-pro{
+        height: 100%;
+        width: 100%;
+        margin-right: auto;
+    }
+
+    .image-pro img{
+        height: 100%;
+        width: 100%;
+        border-radius: 10px 10px 0px 0px;
+    }
+    .card-produit .pp1 p{
+        position: absolute;
+        top: 4%;
+        left: 60%;
+        color: rgb(2, 29, 2);
+        background-color: rgb(146, 243, 146);
+        padding: 8px 14px;
+        border-radius: 10px
+    }
+
+    .haut-pro{
+        display: flex;
+        justify-content: space-between;
+        margin-top: 0px;
+    }
+    .haut-pro p , .param-pro p{
+        margin-bottom: 10px;
+    }
+    .fin-card-1{
+        margin-left: auto;
+    }
+    .fin-card-1 i{
+        color: #e6c400;
+    }
+    .param-pro {
+        flex-direction: column;
+    }
+    .bas-pro{
+        display: flex;
+        justify-content: space-between;
+        margin-top: 10px;
+        align-items: center;
+    }
+    .fin-card-2 button{
+        padding: 10px 10px;
+        background-color: #010208;
+        color: #f3f3f3;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+
+    }
+    .Specialites{
+        font-weight: bold;
+    }
+    .lang p{
+        padding: 5px 10px;
+        border-radius: 5px;
+        opacity: 0.1;
+    }
+    .lang{
+        background-color: #9e8f8f;
+        
+        padding: 5px 10px;
+        border-radius: 5px;
+
+    }
+
+    /* =========================== SECTION COMMENCER ============================ */
+    .commence{
+        height: 240px;
+        background-image: url(image/banner-head-accueil.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        text-align: center;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: white;
+    }
+    .commence h2{
+        font-size: 30px;
+        font-weight: bold;
+        z-index: 5;
+        position: relative;
+    }
+    .commence p{
+        padding-bottom: 30px;
+        z-index: 5;
+        position: relative;
+    }
+    .commence button{
+        padding: 20px 30px;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        color: #ca4b07;
+        font-weight: bold;
+        z-index: 6;
+        position: relative;
+    }
+    .coul-commence{
+        background-color: #61290a;
+        position: absolute;
+        overflow: hidden;
+        opacity: 1;
+        mix-blend-mode: multiply;
+        top: 0;
+        left: 0;
+        height: 240px;
+        width: 100%;
+        z-index: 1;
+    }
+/* =========================== SECTION FOOTER ============================ */
+    footer{
+        height: 100vh;
+    }
+
+    footer .element {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        justify-content: space-around;
+        align-items: center;
+        padding: 40px;
+    }
+    footer .element ul{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.5em;
+        margin-bottom: 2em;
+    }
+
+
+
+
+
+
+
+
+
+
+}
+
+
+
+
+
+
