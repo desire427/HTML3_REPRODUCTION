@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="contact.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer">
+</head>
+<body>
+    <!-- ======================= SECTION DU HEADER ===================== -->
+    <header>
+        
+        <!-- <input type="checkbox" name="chb" id="chb"> -->
+        <div class="logo">
+            <img src="image/logo.png" alt="Logo">
+        </div>
+        <nav>
+            <ul class="header-lien">
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="dashboard.html">Restaurants</a></li>
+                <li><a href="contact.html">Cours de Cuisine</a></li>
+                <li><a href="traiteur.html">Traiteur</a></li>
+                <li><a href="login.html">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="header-buttons">
+            <button class="connexion-btn">Connexion</button>
+            <button class="incription-btn">Inscription</button>
+        </div>
+        <label for="chb"><i class="fa-solid fa-bars"></i></label>
+    </header>
+
+    <!--  ===================== SECTION CONTACT =======================   -->
+    <section class="contact-page">
+        <div class="contact-ecriture">
+            <h2>Contactez-nous</h2>
+            <p>Nous sommes la pour vous aider. N'hesitez pas a nous contacter pour toute question ou suggestion.</p>
+        </div>
+        <div class="contact-form">  
+            <form action="">
+                <div class="nom-prenom">
+                    <div class="form-item-cont">
+                        <label for="prenom">Prenom</label><br>
+                        <input type="text" name="prenom" id="prenom"><br>
+                    </div>
+                    <div class="form-item-cont">
+                        <label for="nom">Nom</label><br>
+                        <input type="text" name="nom" id="nom"><br>
+                    </div>
+                </div>
+                <div class="autre">
+                    <div class="form-item-cont">
+                        <label for="email">Email</label><br>
+                        <input type="email" name="email" id="email"><br>
+                    </div>
+                    <div class="form-item-cont">
+                        <label for="numero">Numero de Telephone</label><br>
+                        <input type="number" name="numero" id="numero"><br>
+                    </div>
+                    <div class="form-item-cont">
+                        <label for="message">Message</label>
+                        <textarea name="message" id="message" cols="30" rows="10"></textarea><br>
+                    </div>
+                </div>
+                <button><i class="fa-regular fa-envelope"></i> Envoyer</button>
+            </form>
+        </div>
+    </section>
+
+    <!--  ===================== SECTION INFO-SITE =======================   -->
+    <section class="contact-present">
+        <div class="cont-cards">
+            <div class="cont-card">
+                <p><i class="fa-solid fa-phone"></i></p>
+                <p><span>Telephone</span></p>
+                <p>+221 XX XXX XX XX</p>
+            </div>
+            <div class="cont-card">
+                <p><i class="fa-regular fa-envelope"></i></p>
+                <p><span>Email</span></p>
+                <p>contact@startbuff.sn</p>
+            </div>
+            <div class="cont-card">
+                <p><i class="fa-solid fa-location-dot"></i></p>
+                <p><span>Adresse</span></p>
+                <p>Dakar, Senegal</p>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+    <!-- =========================== SECTION FOOTER ============================ -->
+     <footer>
+        <div class="element">
+            <div class="footer-item">
+                <span>A propos</span>
+                <ul>
+                    <li><a href="#">Qui sommes-nous</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Mentions legales</a></li>
+                    <li><a href="#">Politique de confidentalite</a></li>
+                </ul>
+            </div>
+            <div class="footer-item">
+                <span>Services</span>
+                <ul>
+                    <li><a href="#">Traiteurs</a></li>
+                    <li><a href="#">Restaurants</a></li>
+                    <li><a href="#">Cours de cuisine</a></li>
+                </ul>
+            </div>
+            <div class="footer-item">
+                <span>Espace Pro</span>
+                <ul>
+                    <li><a href="#">Devenir partenaire</a></li>
+                    <li><a href="#">Conexion</a></li>
+                    <li><a href="#">FAQ Professionnels</a></li>
+                </ul>
+            </div>
+            <div class="footer-item">
+                <span>Contact</span>
+                <ul>
+                    <li>Star Buffet</li>
+                    <li>Dakar, Senegal</li>
+                    <li>Tel: +221 77 000 00 00</li>
+                    <li>Email: contact@startbuff.com</li>
+                </ul>
+            </div>
+        </div>
+        <div class="icone">
+            <ul>
+                <li><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
+            </ul>
+            <ul>
+
+                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+            </ul>
+        </div>
+        <hr> <br>
+        <div class="copyright">
+            <p>
+                &copy; 2026 Star Buffet. Tous droits réservés.
+            </p>
+        </div>
+     </footer>
+</body>
+</html>
