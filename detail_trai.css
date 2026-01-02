@@ -135,7 +135,7 @@ header{
     padding-bottom: 2em;
     padding-left: 0.8em;
     border-radius: 10px;
-    margin-bottom: 2em;
+    margin-bottom: 1em;
 }
 .corp-gauche .corp-gauche-item h3{
     padding-bottom: 1em;
@@ -153,7 +153,7 @@ header{
     padding-bottom: 2em;
     padding-left: 0.8em;
     border-radius: 10px;
-    margin-bottom: 2em;
+    margin-bottom: 1em;
 }
 
 .corp-droite .corp-droite-item h3{
@@ -179,7 +179,7 @@ header{
     margin-right: 0.8em;
 }
 .corp-droite-item .buttons{
-    width: 60%;
+    width: 90%;
     align-items: center;
     margin-right: auto;
     margin-left: auto;
@@ -274,3 +274,127 @@ footer hr {
     background-color: #9e8f8f;
     
 }
+
+
+
+
+
+
+header input, header label{
+    display: none;
+} /*
+/* ============= RESPONSIVITE ================ */
+@media (min-width: 105px) and (max-width: 700px){
+
+/* ============================ SECTION HEADER =============================== */
+    header{
+        padding: 10px;
+        position: sticky;
+        top: 0;
+        z-index: 10;
+    }
+    header input{
+        display: block;
+        appearance: none;
+    }
+
+    header label{
+        display: block;
+        Cursor: pointer;
+    }
+
+    .logo img{
+        width: 20vw;
+        height: 8vh
+    }
+    .header-lien{
+        display: none;
+        position: absolute;
+        transform: translate(-800px, 0);
+        align-items: center;
+        top: 3.5em;
+        left: 0;
+        right: 0;
+        height: 100vh;
+    }
+    .header-buttons{
+        display: none;
+        align-items: center;
+        position: absolute;
+        transform: translate(-800px, 0);
+        top: 20em;
+        left: 0;
+        right: 0;
+    }
+    header #chb:checked ~ nav .header-lien{
+        display: block;
+        transform: translate(0, 0);
+        transition: all 0.5s ease;
+        margin-bottom: 2em;
+        background-color: #020011;
+    }
+    header #chb:checked ~ .header-buttons{
+        display: block;
+        transform: translate(0 , 0);
+        transition: all 0.5s ease;
+    }
+    .header-lien a{
+        display: block;
+        margin-left: 50px;
+        padding: 1em;
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+
+
+/*   ======================= SECTION CORPS ========================  */
+
+.corp{
+    display: block;
+}
+.corp-gauche {
+    width: 100%;
+}
+
+.corp-droite {
+    width: 100%;
+    margin-left: 0px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
