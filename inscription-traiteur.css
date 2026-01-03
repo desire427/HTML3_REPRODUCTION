@@ -385,3 +385,242 @@ footer hr {
     background-color: #9e8f8f;
     
 }
+
+
+
+
+
+
+
+/* ============= RESPONSIVITE ================ */
+@media (min-width: 105px) and (max-width: 768px){
+
+/* ============================ SECTION HEADER =============================== */
+    header{
+        padding: 10px;
+        position: sticky;
+        top: 0;
+        z-index: 100;
+    }
+    header input{
+        display: block;
+        appearance: none;
+    }
+
+    header label{
+        display: block;
+        Cursor: pointer;
+    }
+
+    .logo img{
+        width: 20vw;
+        height: 8vh;
+    }
+    .header-lien{
+        display: none;
+        position: absolute;
+        transform: translate(-800px, 0);
+        align-items: center;
+        top: 3.5em;
+        left: 0;
+        right: 0;
+        height: 100vh;
+    }
+    .header-buttons{
+        display: none;
+        align-items: center;
+        position: absolute;
+        transform: translate(-800px, 0);
+        top: 20em;
+        left: 0;
+        right: 0;
+    }
+    header #chb:checked ~ nav .header-lien{
+        display: block;
+        transform: translate(0, 0);
+        transition: all 0.5s ease;
+        margin-bottom: 2em;
+        background-color: #020011;
+    }
+    header #chb:checked ~ .header-buttons{
+        display: block;
+        transform: translate(0 , 0);
+        transition: all 0.5s ease;
+    }
+    .header-lien a{
+        display: block;
+        margin-left: 50px;
+        padding: 1em;
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+    }
+/* ================================= SECTION PRESENTATION ======================= */
+    .presentation{
+        height: 80vh;
+        display: block;
+        justify-content: center;
+        width: 98%;
+        margin-left: auto;
+        margin-right: auto
+    }
+    .coul{
+        height: 80vh;
+        width: 100%;    
+    }
+    .ecriture-presention{
+        width: 100%;
+        margin: auto;
+        text-align: center;
+    }
+
+    .presentation .ecriture-presention h2{
+        font-size: 2.3em;
+    }
+    .presentation .ecriture-presention h2 span{
+        color: #e6c400;
+    }
+    .presentation .ecriture-presention p{
+        font-size: 1.5em;
+        margin-bottom: 10px;
+        text-align: center;
+
+    }
+    .image-thieb{
+        right: auto;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        text-align: center;
+        flex-direction: column;
+    }
+
+    .image-thieb img{
+        width: 80vw;
+        height: 30vh;
+        border-radius: 30px;
+
+        
+    }
+
+
+
+
+
+
+
+
+
+
+
+/*  =========================== SECTION INSCRIPTION ============================  */
+.inscrption-t{
+    height: 195vh;
+    background-color: white;
+    width: 90%;
+    margin: auto;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    padding: 2%;
+    border-radius: 2px;
+    box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.1);
+}
+form{
+    height: 400px;
+}
+/* ======== information de base */
+
+.label-input {
+    display: block;
+}
+
+/* ================= Informations de contact */
+
+.info-con{
+    display: block;
+}
+
+/* ========================== photo de profile */
+.photo-profile {
+    background-color: white;
+    box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 20px 20px;
+    margin-bottom: 10px;
+}
+.photo-profile h3{
+    padding-bottom: 30px;
+}
+.photo-profile input{
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+    font-size: 14px;
+}
+
+form button{
+    padding: 10px 20px;
+    background-color: #E65100;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-left: 70%;
+}
+.photo-profile input{
+    border: transparent;
+    width: 100%;
+}
+.photo-profile input::file-selector-button {
+    color: #E65100;
+    border: none;
+    background-color: rgb(255, 255, 179);
+    cursor: pointer;
+    font-size: 1.3em;
+    padding: 10px;
+    font-weight: bold;
+    border-radius: 10px;
+    margin-right: 0.7em;
+    border: transparent;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /* =========================== SECTION FOOTER ============================ */
+    footer{
+        height: 90vh;
+    }
+
+    footer .element {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        justify-content: space-around;
+        align-items: center;
+        padding: 40px;
+    }
+    footer .element ul{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.5em;
+        margin-bottom: 2em;
+    }
+
+}

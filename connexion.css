@@ -117,26 +117,6 @@ header{
     border-radius: 5px;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* =========================== SECTION FOOTER ============================ */
 footer{
     height: 370px;
@@ -191,4 +171,148 @@ footer hr {
     margin: auto;
     background-color: #9e8f8f;
     
+}
+
+
+
+
+
+
+
+/* ============= RESPONSIVITE ================ */
+@media (min-width: 105px) and (max-width: 768px){
+
+/* ============================ SECTION HEADER =============================== */
+    header{
+        padding: 10px;
+        position: sticky;
+        top: 0;
+        z-index: 100;
+    }
+    header input{
+        display: block;
+        appearance: none;
+    }
+
+    header label{
+        display: block;
+        Cursor: pointer;
+    }
+
+    .logo img{
+        width: 20vw;
+        height: 8vh;
+    }
+    .header-lien{
+        display: none;
+        position: absolute;
+        transform: translate(-800px, 0);
+        align-items: center;
+        top: 3.5em;
+        left: 0;
+        right: 0;
+        height: 100vh;
+    }
+    .header-buttons{
+        display: none;
+        align-items: center;
+        position: absolute;
+        transform: translate(-800px, 0);
+        top: 20em;
+        left: 0;
+        right: 0;
+    }
+    header #chb:checked ~ nav .header-lien{
+        display: block;
+        transform: translate(0, 0);
+        transition: all 0.5s ease;
+        margin-bottom: 2em;
+        background-color: #020011;
+    }
+    header #chb:checked ~ .header-buttons{
+        display: block;
+        transform: translate(0 , 0);
+        transition: all 0.5s ease;
+    }
+    .header-lien a{
+        display: block;
+        margin-left: 50px;
+        padding: 1em;
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+/*  ========================== SECTION CONNEXION ============================  */
+    .connexion{
+        width: 95%;
+        background-color: white;
+        height: 20em;
+        margin-bottom: 10em;
+        margin-top: 10em;
+        margin-left: auto;
+        margin-right: auto;
+        box-shadow: 5px 5px 30px rgb(0, 0, 0, 0.1);
+        border-radius: 5px;
+        padding: 1em 1.4em;
+    }
+    .connexion h2{
+        text-align: center;
+    }
+    .connexion form .input1{
+        width: 100%;
+        height: 2.5em;
+        border-radius: 4px;
+        margin-bottom: 1em;
+        padding: 1em;
+        border: 1px solid rgb(138, 137, 137);
+        box-shadow: 5px 5px 30px rgba(115, 112, 112, 0.1);
+    }
+    .autres{
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 1.4em;
+    }
+    .autres .aut-d a{
+        color: #E65100;
+    }
+    .autres .aut-g input{
+        box-shadow: 5px 5px 30px rgba(45, 44, 44, 0.1);
+    }
+    .connexion form .pas-enc{
+        color: #E65100;
+    }
+    .connexion form .pas-enc a{
+        color: #E65100;
+    }
+    .connexion form a button{
+        color: white;
+        background-color: #E65100;
+        border: none;
+        width: 100%;
+        padding: 0.8em;
+        margin-top: 1em;
+        border-radius: 5px;
+    }
+
+    /* =========================== SECTION FOOTER ============================ */
+    footer{
+        height: 90vh;
+    }
+
+    footer .element {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        justify-content: space-around;
+        align-items: center;
+        padding: 40px;
+    }
+    footer .element ul{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.5em;
+        margin-bottom: 2em;
+    }
+
+
 }
