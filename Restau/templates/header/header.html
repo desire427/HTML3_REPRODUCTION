@@ -1,0 +1,23 @@
+{% load static %}
+    <!-- ======================= SECTION DU HEADER ===================== -->
+    <header>
+        
+        <!-- <input type="checkbox" name="chb" id="chb"> -->
+        <div class="logo">
+            <img src="{% static 'media/logo.png' %}" alt="Logo">
+        </div>
+        <nav>
+            <ul class="header-lien">
+                <li><a href="{% url 'accueil' %}">Accueil</a></li>
+                <li><a href="dashboard.html">Restaurants</a></li>
+                <li><a href="cours-cuisine.html">Cours de Cuisine</a></li>
+                <li><a href="{% url 'traiteur' %}">Traiteur</a></li>
+                <li><a href="{% url 'contact' %}">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="header-buttons">
+            <button class="connexion-btn">Connexion</button>
+            <button class="incription-btn">Inscription</button>
+        </div>
+        <label for="chb"><i class="fa-solid fa-bars"></i></label>
+    </header>

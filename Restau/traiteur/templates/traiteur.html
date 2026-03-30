@@ -1,0 +1,123 @@
+{% extends 'base/base.html' %}
+{% load static %}
+
+{% block title %}Traiteur{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/traiteur.css' %}">
+{% endblock %}
+
+{% block content %}
+    <!-- ======================= SECTION PRESENTATION ======================== -->
+    <section>
+        <div class="coul"></div>
+        <div class="presentation"> 
+            <div class="ecriture-presention">
+                <h2>
+                    Nos Traiteurs
+                </h2>
+                <p>Decouvrez nos traiteur Professionnels pour vos evenements, mariage, bapteme et reception.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======================= SECTION PRODUIT ======================== -->
+
+    <section>
+        <div class="filtre">
+            <h2> Filtres </h2>
+            <div class="filtre-items">
+                <div class="filtre-item-1">
+                    <div class="filtre-item">
+                        <p class="item">Specialite</p>
+                        <select name="specialites" id="specialites">
+                            <option value="#">Toutes les specialites</option>
+                        </select>
+                    </div>
+                    <div class="filtre-item">
+                        <p class="item">Statut</p>
+                        <select name="status" id="status">
+                            <option value="#">Tous les status</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="filtre-item-2">
+                    <div class="filtre-item">
+                        <br>
+                        <button class="fil"><i class="fa-solid fa-filter"></i> Filtrer</button>
+                    </div>
+                    <div class="filtre-item">
+                        <br>
+                        <button class="rei"><i class="fa-solid fa-arrows-rotate"></i> Reinitialise</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card-produit">
+            <div class="gauche-pro">
+                <div class="image-pro">
+                    <img src="{% static 'media/salade.jpeg'%}" alt="image-salade">
+                </div>
+                <div class="pp1">
+                    <p><i class="fa-solid fa-circle-check"></i>Verifier</p>
+                </div>
+            </div>
+            <div class="droite-pro">
+                <div class="haut-pro">
+                    <p><i class="fa-solid fa-circle"></i>1979 ans d'experience</p>
+                    <p class="fin-card-1"><i class="fa-solid fa-star"></i> 0.0</p>
+                </div>
+                <div class="param-pro">
+                    <p>Nam ex nulla similiq</p>
+                    <p class="Specialites">Specialites: </p>
+                    <p><span class="lang">Francais</span> <span class="lang">Indien</span></p>
+                </div>
+                <div class="bas-pro">
+                    <p><i class="fa-solid fa-phone"></i> +1(684) 758-7777</p>
+                    <p class="fin-card-2"><a href="{% url 'detail' %}"><button> Voir le profil </button></a></p>
+                </div>
+            </div>
+        </div>
+        <div class="card-produit">
+            <div class="gauche-pro">
+                <div class="image-pro">
+                     <img src="{% static 'media/pagne.jpeg'%}" alt="image-pagne">
+                </div>
+                <div class="pp1">
+                    <p><i class="fa-solid fa-circle-check"></i>Verifier</p>
+                </div>
+            </div>
+            <div class="droite-pro">
+                <div class="haut-pro">
+                    <p><i class="fa-solid fa-circle"></i>2016 ans d'experience</p>
+                    <p class="fin-card-1"><i class="fa-solid fa-star"></i> 0.0</p>
+                </div>
+                <div class="param-pro">
+                    <p>Perspiciatis quia a</p>
+                    <p class="Specialites">Specialites: </p>
+                    <p><span class="lang">Joponaise</span></p>
+                </div>
+                <div class="bas-pro">
+                    <p><i class="fa-solid fa-phone"></i> +1(684) 758-7777</p>
+                    <p class="fin-card-2"><a href="{% url 'detail' %}"><button> Voir le profil </button></a></p>
+                </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- =========================== SECTION COMMENCER ============================ -->
+    <section>
+        <div class="commence">
+            <div class="coul-commence"></div>
+            <h2>Vous etes traiteur ?</h2><br>
+            <p>Rejoignez notre reseau et developpez votre activite evenementille !</p>
+            <button>
+                Devenir traiteur
+            </button>
+        </div>
+    </section>
+{% endblock %}

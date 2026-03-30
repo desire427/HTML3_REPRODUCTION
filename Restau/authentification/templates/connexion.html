@@ -1,0 +1,35 @@
+{% extends 'base/base.html' %}
+{% load static %}
+
+{% block title %}Connexion{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/connexion.css' %}">
+{% endblock %}
+
+{% block content %}
+
+    <!-- ========================== SECTION CONNEXION ============================ -->
+    <section>
+        <div class="connexion">
+            <h2>Connexion</h2>
+            <form action="">
+                <label for="email">Email</label><br>
+                <input class="input1" type="email" name="email" id="email"><br>
+                <label for="password">Mot de passe</label><br>
+                <input class="input1" type="password" name="password" id="password"><br>
+                <div class="autres">
+                    <div class="aut-g">
+                        <input type="checkbox" name="souvenir" id="souvenir">
+                        <label for="souvenir">Souvenir</label>
+                    </div>
+                    <div class="aut-d">
+                        <p><a href="#">Mot de passe oublie ?</a></p>
+                    </div>
+                </div>
+                <p class="pas-enc">Pas encore de compte ? <a href="inscription-traiteur.html">Inscrivez vous</a></p>
+                <a href="#"><button>Se connecter</button></a>
+            </form>
+        </div>
+    </section>
+{% endblock %}
