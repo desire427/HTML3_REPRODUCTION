@@ -31,14 +31,18 @@
                 <div class="filtre-item-1">
                     <div class="filtre-item">
                         <p class="item">Specialite</p>
-                        <select name="specialites" id="specialites">
-                            <option value="#">Toutes les specialites</option>
+                        <select name="specialites" id="specialite" multiple>
+                            {% for sp in specialites %}
+                            <option value="{{ sp.id }}">{{ sp.specialite }}</option>
+                            {% endfor %}
                         </select>
                     </div>
                     <div class="filtre-item">
-                        <p class="item">Statut</p>
-                        <select name="status" id="status">
-                            <option value="#">Tous les status</option>
+                        <p class="item">Service</p>
+                        <select name="services" id="services" multiple>
+                            {% for svc in services %}
+                            <option value="{{ svc.id }}">{{ svc.Service }}</option>
+                            {% endfor %}
                         </select>
                     </div>
                 </div>
@@ -54,58 +58,37 @@
                 </div>
             </div>
         </div>
-        <div class="card-produit">
-            <div class="gauche-pro">
-                <div class="image-pro">
-                    <img src="{% static 'media/salade.jpeg'%}" alt="image-salade">
-                </div>
-                <div class="pp1">
-                    <p><i class="fa-solid fa-circle-check"></i>Verifier</p>
-                </div>
-            </div>
-            <div class="droite-pro">
-                <div class="haut-pro">
-                    <p><i class="fa-solid fa-circle"></i>1979 ans d'experience</p>
-                    <p class="fin-card-1"><i class="fa-solid fa-star"></i> 0.0</p>
-                </div>
-                <div class="param-pro">
-                    <p>Nam ex nulla similiq</p>
-                    <p class="Specialites">Specialites: </p>
-                    <p><span class="lang">Francais</span> <span class="lang">Indien</span></p>
-                </div>
-                <div class="bas-pro">
-                    <p><i class="fa-solid fa-phone"></i> +1(684) 758-7777</p>
-                    <p class="fin-card-2"><a href="{% url 'detail' %}"><button> Voir le profil </button></a></p>
-                </div>
-            </div>
-        </div>
-        <div class="card-produit">
-            <div class="gauche-pro">
-                <div class="image-pro">
-                     <img src="{% static 'media/pagne.jpeg'%}" alt="image-pagne">
-                </div>
-                <div class="pp1">
-                    <p><i class="fa-solid fa-circle-check"></i>Verifier</p>
-                </div>
-            </div>
-            <div class="droite-pro">
-                <div class="haut-pro">
-                    <p><i class="fa-solid fa-circle"></i>2016 ans d'experience</p>
-                    <p class="fin-card-1"><i class="fa-solid fa-star"></i> 0.0</p>
-                </div>
-                <div class="param-pro">
-                    <p>Perspiciatis quia a</p>
-                    <p class="Specialites">Specialites: </p>
-                    <p><span class="lang">Joponaise</span></p>
-                </div>
-                <div class="bas-pro">
-                    <p><i class="fa-solid fa-phone"></i> +1(684) 758-7777</p>
-                    <p class="fin-card-2"><a href="{% url 'detail' %}"><button> Voir le profil </button></a></p>
-                </div>
-                </div>
-            </div>
 
+        <!-- CARDE DES PRODUITS -->
+         {% for traiteur in traiteurs %}
+        <div class="card-produit">
+            <div class="gauche-pro">
+                <div class="image-pro">
+                    <img src="{{ traiteur.image.url }}" alt="image-salade">
+                </div>
+                <div class="pp1">
+                    <p><i class="fa-solid fa-circle-check"></i>Verifier</p>
+                </div>
+            </div>
+            <div class="droite-pro">
+                <div class="haut-pro">
+                    <p><i class="fa-solid fa-circle"></i>{{ traiteur.annee_experience }} ans d'experience</p>
+                    <p class="fin-card-1"><i class="fa-solid fa-star"></i> 0.0</p>
+                </div>
+                <div class="param-pro">
+                    <p>{{ traiteur.description }}</p>
+                    <p class="Specialites">Specialites: </p>
+                    {% for s in traiteur.Specialite.all %}
+                        <span class="lang">{{ s.specialite }}</span>
+                    {% endfor %}
+                </div>
+                <div class="bas-pro">
+                    <p><i class="fa-solid fa-phone"></i>{{ traiteur.telephone }}</p>
+                    <p class="fin-card-2"><a href="{% url 'detail' traiteur.id %}"><button> Voir le profil </button></a></p>
+                </div>
+            </div> 
         </div>
+        {% endfor %}
     </section>
 
 

@@ -1,7 +1,7 @@
 {% extends 'base/base.html' %}
 {% load static %}
 
-{% block title %}Detail Traiteur{% endblock %}
+{% block title %}Info par Traiteur{% endblock %}
 
 {% block extra_css %}
 <link rel="stylesheet" href="{% static 'css/detail_trai.css' %}">
@@ -9,9 +9,11 @@
 
 {% block content %}
 
+{% load static %}
+
     <!-- ======================= SECTION PRESENTATION ======================== -->
      <section>
-        <div class="presentation"> 
+        <div class="presentation" style="background-image: url('{{ traiteur.image.url }}');">
             <div class="coule"></div>
             <div class="p">
                 <p class="el1"><i class="fa-solid fa-star"></i> 0.0/5</p>
@@ -19,43 +21,47 @@
             </div>
         </div>
      </section>
+
     <!-- ======================= SECTION CORPS ======================== -->
      <section>
         <div class="corp">
             <div class="corp-gauche">
                 <div class="corp-gauche-item">
                     <h3>A propos</h3>
-                    <p>Nam ex Nulla similinq</p>
+                    <p>{{ traiteur.description }}</p>
                 </div>
                 <div class="corp-gauche-item">
                     <h3>Sepecialite</h3>
-                    <p><span class="lang">Francais</span> <span class="lang">Indien</span></p>
+                    {% for s in traiteur.Specialite.all %}
+                        <span class="lang">{{ s.specialite }}</span>
+                    {% endfor %}
                 </div>
                 <div class="corp-gauche-item">
                     <h3>Services proposés</h3>
                     <div class="cor-p">
-                        <p><i class="fa-solid fa-check"></i>Mariage</p>
-                        <p><i class="fa-solid fa-check"></i>Cocktails</p>
-                        <p><i class="fa-solid fa-check"></i>Anniversaire</p>
-                        <p><i class="fa-solid fa-check"></i>Cuisine sur mesure</p>
+                        {% for s in traiteur.Service.all %}
+                            <p><i class="fa-solid fa-check"></i>{{ s.Service }}</p>
+                        {% endfor %}
                     </div>
                 </div>
             </div>
             <div class="corp-droite">
                 <div class="corp-droite-item">
                     <h3>Contact</h3>
-                    <p><i class="fa-solid fa-location-dot"></i> Minima eum aliquip a</p>
-                    <p><i class="fa-solid fa-phone"></i>+1 (684) 758-7777</p>
-                    <p><i class="fa-solid fa-envelope"></i>dss@ds.ds</p>
+                    <p><i class="fa-solid fa-location-dot"></i>{{ traiteur.adresse }}</p>
+                    <p><i class="fa-solid fa-phone"></i>{{ traiteur.telephone }}</p>
+                    <p><i class="fa-solid fa-envelope"></i>{{ traiteur.email }}</p>
                     <p></p>
                 </div>
                 <div class="corp-droite-item">
                     <h3>Experience</h3>
-                    <p><i class="fa-solid fa-calendar"></i>1979 ans d'experience</p>
+                    <p><i class="fa-solid fa-calendar"></i>{{ traiteur.annee_experience }} ans d'experience</p>
                 </div>
                 <div class="corp-droite-item">
                     <h3>Langues parlees</h3>
-                    <p><span class="lang">Francais</span> <span class="lang">Indien</span> <span class="lang">Arabe</span></p>
+                    {% for l in traiteur.langue.all %}
+                        <p><i class="fa-solid fa-language"></i>{{ l.langue }}</p>
+                    {% endfor %}
                 </div>
                 <div class="corp-droite-item" id="cor-dr-but">
                     <div class="buttons">
@@ -64,6 +70,8 @@
                 </div>
             </div>
         </div>
-     </section>
+     
+    </section>
+
 
 {% endblock %}

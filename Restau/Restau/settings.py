@@ -83,7 +83,7 @@ WSGI_APPLICATION = "Restau.wsgi.application"
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.mysql",
-        "NAME": "Resto",
+        "NAME": "Restor",
         "USER": "root",
         "PASSWORD": "Desire@17",
         "HOST": "localhost",

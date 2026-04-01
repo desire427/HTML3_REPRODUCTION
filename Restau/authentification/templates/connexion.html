@@ -13,11 +13,19 @@
     <section>
         <div class="connexion">
             <h2>Connexion</h2>
-            <form action="">
+            <form action="" method="post">
+                {% csrf_token %}
+                {% if messages %}
+                    <ul class="messages">
+                        {% for message in messages %}
+                            <li class="{{ message.tags }}">{{ message }}</li>
+                        {% endfor %}
+                    </ul>
+                {% endif %}
                 <label for="email">Email</label><br>
-                <input class="input1" type="email" name="email" id="email"><br>
+                <input class="input1" type="email" name="email" id="email" required><br>
                 <label for="password">Mot de passe</label><br>
-                <input class="input1" type="password" name="password" id="password"><br>
+                <input class="input1" type="password" name="password" id="password" required><br>
                 <div class="autres">
                     <div class="aut-g">
                         <input type="checkbox" name="souvenir" id="souvenir">
@@ -27,8 +35,8 @@
                         <p><a href="#">Mot de passe oublie ?</a></p>
                     </div>
                 </div>
-                <p class="pas-enc">Pas encore de compte ? <a href="inscription-traiteur.html">Inscrivez vous</a></p>
-                <a href="#"><button>Se connecter</button></a>
+                <p class="pas-enc">Pas encore de compte ? <a href="{% url 'inscription' %}">Inscrivez vous</a></p>
+                <button type="submit">Se connecter</button>
             </form>
         </div>
     </section>

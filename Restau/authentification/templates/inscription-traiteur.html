@@ -26,28 +26,36 @@
     <!-- =========================== SECTION INSCRIPTION ============================ -->
      <section>
         <div class="inscrption-t">
-            <form action="">
+            <form action="" method="post" enctype="multipart/form-data">
+                {% csrf_token %}
+                {% if messages %}
+                    <ul class="messages">
+                        {% for message in messages %}
+                            <li class="{{ message.tags }}">{{ message }}</li>
+                        {% endfor %}
+                    </ul>
+                {% endif %}
                 <div class="information-base">
                     <h3>Informations de base</h3>
                     <div class="label-input">
                         <div class="label-input-item">
                             <label for="nom_complet">Nom complet</label>
-                            <input type="text" id="nom_complet">
+                            <input type="text" id="nom_complet" name="nom_complet" required>
                         </div>
 
                         <div class="label-input-item">
                             <label for="email">Email</label>
-                            <input type="email" id="email" value="bintadmin@gmail.com">
+                            <input type="email" id="email" name="email" required>
                         </div>
 
                         <div class="label-input-item">
                             <label for="password">Mot de passe</label>
-                            <input type="password" id="password" value="********">
+                            <input type="password" id="password" name="password" required>
                         </div>
 
                         <div class="label-input-item">
                             <label for="confirme_password">Confirmer le mot de passe</label>
-                            <input type="password" id="confirme_password">
+                            <input type="password" id="confirme_password" name="confirme_password" required>
                         </div>
                     </div>
 
@@ -55,9 +63,11 @@
                 <div class="information-professionnelle">
                     <h3>Informations professionnelles</h3>
                     <div class="info-pro-1">
-                        <label for="categorie">Categorie</label><br>
-                        <select name="categorie" id="categorie">
-                            <option value="categorie">Selectionnez une categorie</option><br>
+                        <label for="specialites">Specialites (selection multiple possible)</label><br>
+                        <select name="specialites" id="specialites" multiple required>
+                            {% for sp in specialites %}
+                                <option value="{{ sp.id }}">{{ sp.specialite }}</option>
+                            {% endfor %}
                         </select><br><br>
                         <label for="annee-expe">Annees d'experience</label><br>
                         <input type="number" name="annee-expe" id="annee-expe"><br><br>
@@ -66,34 +76,12 @@
                     </div>
                     <h3>Services proposes</h3>
                     <div class="serv-pro">
+                        {% for svc in services %}
                         <div class="serv-pr-item">
-                            <input type="checkbox" name="Mariage" id="Mariage">
-                            <label for="mariage">Mariage</label>
+                            <input type="checkbox" name="services" id="service_{{ svc.id }}" value="{{ svc.id }}">
+                            <label for="service_{{ svc.id }}">{{ svc.Service }}</label>
                         </div>
-                        <div class="serv-pr-item">
-                            <input type="checkbox" name="Anniversaire" id="Anniversaire">
-                            <label for="Anniversaire">Anniversaire</label>
-                        </div>
-                        <div class="serv-pr-item">
-                            <input type="checkbox" name="Evenements" id="Evenements">
-                            <label for="Evenements">Evenements</label>
-                        </div>
-                        <div class="serv-pr-item">
-                            <input type="checkbox" name="Cocktails" id="Cocktails">
-                            <label for="Cocktails">Cocktails</label>
-                        </div>
-                        <div class="serv-pr-item">
-                            <input type="checkbox" name="Buffets" id="Buffets">
-                            <label for="Buffets">Buffets</label>
-                        </div>
-                        <div class="serv-pr-item">
-                            <input type="checkbox" name="Diners" id="Diners">
-                            <label for="Diners">Diners prive</label>
-                        </div>
-                        <div class="serv-pr-item">
-                            <input type="checkbox" name="Cuisine" id="Cuisine">
-                            <label for="Cuisine">Cuisine sur mesure</label>
-                        </div>    
+                        {% endfor %}
                     </div> 
                 </div>
 
