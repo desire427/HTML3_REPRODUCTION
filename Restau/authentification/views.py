@@ -1,29 +1,29 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate, login, logout
+from django.contrib.auth.forms import AuthenticationForm
 from django.contrib.auth.models import User
 from django.contrib import messages
+from django.db import transaction
 from traiteur.models import Service, Specialite, Traiteur
 from .models import TraiteurProfile
 
 
 def connexion(request):
-    if request.method == 'POST':
-        email = request.POST.get('email')
-        password = request.POST.get('password')
-        try:
-            user = User.objects.get(email=email)
-        except User.DoesNotExist:
-            messages.error(request, "Utilisateur introuvable")
-            return render(request, 'connexion.html')
+    if request.user.is_authenticated:
+        return redirect('traiteur')
 
-        utilisateur = authenticate(username=user.username, password=password)
-        if utilisateur is not None:
-            login(request, utilisateur)
+    if request.method == 'POST':
+        form = AuthenticationForm(request, data=request.POST)
+        if form.is_valid():
+            user = form.get_user()
+            login(request, user)
             return redirect('traiteur')
         else:
             messages.error(request, "E-mail ou mot de passe incorrect")
+    else:
+        form = AuthenticationForm()
 
-    return render(request, 'connexion.html')
+    return render(request, 'connexion.html', {'form': form})
 
 
 def inscription(request):
@@ -54,55 +54,54 @@ def inscription(request):
             messages.error(request, "Un compte existe deja avec cet email")
             return render(request, 'inscription-traiteur.html', {'services': services_objects, 'specialites': specialites})
 
-        username = email.split('@')[0]
-        if User.objects.filter(username=username).exists():
-            username = f"{username}_{User.objects.count()+1}"
+        try:
+            with transaction.atomic():
+                username = email.split('@')[0]
+                base_username = username
+                counter = 1
+                while User.objects.filter(username=username).exists():
+                    username = f"{base_username}_{counter}"
+                    counter += 1
+                user = User.objects.create_user(username=username, email=email, password=password)
+                
+                profile = TraiteurProfile.objects.create(
+                    user=user,
+                    nom_complet=nom_complet,
+                    categorie='',
+                    annee_experience=int(annee_experience or 0),
+                    description=description,
+                    telephone=telephone,
+                    adresse=adresse,
+                    photo=photo,
+                )
 
-        user = User.objects.create_user(username=username, email=email, password=password)
-        profile = TraiteurProfile.objects.create(
-            user=user,
-            nom_complet=nom_complet,
-            categorie='',
-            annee_experience=int(annee_experience or 0),
-            description=description,
-            telephone=telephone,
-            adresse=adresse,
-            photo=photo,
-        )
+                traiteur_obj = Traiteur.objects.create(
+                    nomcomplet=nom_complet,
+                    description=description,
+                    adresse=adresse,
+                    estactif=True,
+                    email=email,
+                    telephone=telephone,
+                    annee_experience=int(annee_experience or 0),
+                    image=photo,
+                )
 
-        traiteur_obj = Traiteur.objects.create(
-            nomcomplet=nom_complet,
-            description=description,
-            adresse=adresse,
-            estactif=True,
-            email=email,
-            telephone=telephone,
-            annee_experience=int(annee_experience or 0),
-            image=photo,
-        )
+                # Mise à jour des relations Many-to-Many
+                if specialites_ids:
+                    sps = Specialite.objects.filter(id__in=specialites_ids)
+                    profile.specialites.set(sps)
+                    traiteur_obj.Specialite.set(sps)
 
-        if specialites_ids:
-            for specialite_id in specialites_ids:
-                try:
-                    sp = Specialite.objects.get(id=specialite_id)
-                    profile.specialites.add(sp)
-                    traiteur_obj.Specialite.add(sp)
-                except Specialite.DoesNotExist:
-                    pass
+                services_ids = request.POST.getlist('services')
+                if services_ids:
+                    svcs = Service.objects.filter(id__in=services_ids)
+                    profile.services.set(svcs)
+                    traiteur_obj.Service.set(svcs)
 
-        services_ids = request.POST.getlist('services')
-        if services_ids:
-            for service_id in services_ids:
-                try:
-                    svc = Service.objects.get(id=service_id)
-                    profile.services.add(svc)
-                    traiteur_obj.Service.add(svc)
-                except Service.DoesNotExist:
-                    pass
-
-        traiteur_obj.save()
-        messages.success(request, "Inscription réussie. Veuillez vous connecter.")
-        return redirect('connexion')
+            messages.success(request, "Inscription réussie. Veuillez vous connecter.")
+            return redirect('connexion')
+        except Exception as e:
+            messages.error(request, f"Une erreur est survenue lors de l'inscription : {e}")
 
     return render(request, 'inscription-traiteur.html', {'services': services_objects, 'specialites': specialites})
 
